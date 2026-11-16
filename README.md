@@ -41,7 +41,7 @@ Settings live on the `preview-media` entry (Settings → Plugins, or the profile
 | `debug` | `false` | Append playback/loopback diagnostics to `$DSH_HOME/preview-media-debug.log`. Leave off unless you are diagnosing a problem. |
 | `maxBytes` | `2147483648` (2 GiB) | Largest file served; larger files answer `413`. |
 | `chunkBytes` | `1048576` | Bytes per ranged read. |
-| `videoExtensions` | `mp4, m4v, mov, webm, ogv, ogg, mkv, avi, wmv, flv, 3gp, ts, m2ts, mts` | Suffixes the video player claims. |
+| `videoExtensions` | `mp4, m4v, mov, webm, ogv, ogg, mkv, avi, wmv, flv, 3gp, m2ts, mts` | Suffixes the video player claims. |
 | `audioExtensions` | `mp3, wav, flac, m4a, aac, oga, opus, weba, wma, aiff, aif` | Suffixes the audio player claims. |
 
 The browser half mirrors the suffix lists in `lib/client.js`; keep them in sync when changing either side. The route path is published to the page as `__DSH_PREVIEW_MEDIA_CONFIG__` by the Host, so a configured path and the player's URL never drift apart.

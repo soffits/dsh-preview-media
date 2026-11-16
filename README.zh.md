@@ -41,7 +41,7 @@ dsh plugin --profile <profile> add dsh-preview-media
 | `debug` | `false` | 把播放器与回环源的诊断事件逐行写进 `$DSH_HOME/preview-media-debug.log`。只有排查播放问题时才需要打开。 |
 | `maxBytes` | `2147483648`（2 GiB） | 允许流式传输的最大文件，更大的回 `413`。 |
 | `chunkBytes` | `1048576` | 每次范围读的字节数。 |
-| `videoExtensions` | `mp4, m4v, mov, webm, ogv, ogg, mkv, avi, wmv, flv, 3gp, ts, m2ts, mts` | 视频播放器接管的后缀。 |
+| `videoExtensions` | `mp4, m4v, mov, webm, ogv, ogg, mkv, avi, wmv, flv, 3gp, m2ts, mts` | 视频播放器接管的后缀。 |
 | `audioExtensions` | `mp3, wav, flac, m4a, aac, oga, opus, weba, wma, aiff, aif` | 音频播放器接管的后缀。 |
 
 浏览器半在 `lib/client.js` 里另存一份同样的后缀表，改一侧要同步改另一侧。路由路径由 Host 以 `__DSH_PREVIEW_MEDIA_CONFIG__` 注入页面，配置值不会和播放器用的 URL 走偏。
